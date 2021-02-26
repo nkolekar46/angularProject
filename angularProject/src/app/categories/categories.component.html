@@ -1,0 +1,102 @@
+<div>
+
+  <mat-card class="example-card">
+    <mat-grid-list cols="2" rowHeight="4:3">
+
+      <select id="sort-by" (change)="sort($event)">
+        <option value="" selected disabled hidden>Sort By</option>
+        <option value="Name">Name</option>
+        <option value="Low">Show Low to High Price</option>
+        <option value="High">Show High to Low Price</option>
+    </select>
+
+
+    
+      <mat-selection-list #shoes>
+        <div class="product" style="margin-top: 20px;" *ngFor="let item of products">
+          <mat-grid-tile>
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{item.title}}</mat-card-title>
+              <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src={{item.image}} alt="" style="width: 300px; height: 300px; object-fit: contain;"><br>
+            <mat-card-content>
+              <p>{{item.price}}</p><br>
+              <p>{{item.description}}</p><br>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-list-option>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-list-option>
+            </mat-card-actions>
+          </mat-grid-tile>
+        </div>
+      </mat-selection-list>
+    </mat-grid-list>
+  </mat-card>
+
+</div>
+
+<!-- <mat-selection-list #shoes>
+  <mat-list-option *ngFor="let item of products">
+    {{item}}
+  </mat-list-option>
+</mat-selection-list> -->
+<div>
+  <h2> Options selected: {{shoes.selectedOptions.selected.length}}</h2>
+</div>
+
+
+<!-- 
+<div class="allCategories">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <div class="myCategory" style="margin-top: 20px;" *ngFor="let item of category">
+
+            <mat-grid-tile>
+                <mat-card-header>
+                    <mat-card-title>{{item.title}}</mat-card-title>
+                    <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src={{item.image}} alt="" style="width: 300px; height: 300px; object-fit: contain;">
+
+                <mat-card-content>
+                    <p>$<strong>{{item.price}}</strong></p>
+                    <p>{{item.description}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="primary">Add to cart</button>
+                </mat-card-actions>
+
+            </mat-grid-tile>
+        </div>
+    </mat-grid-list>
+</div>
+
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"  *ngFor="let item of category"></div>
+      <mat-card-title>{{item.title}}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card> -->
+
+<!-- 
+ <h1>categories works</h1>
+<div class="products">
+<div *ngFor="let item of category">{{item}}</div>
+</div> -->

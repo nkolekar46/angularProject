@@ -1,0 +1,35 @@
+<div>
+<p>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row >
+      <!-- <span color="primary">  <a routerLink="/home">Home</a> </span>
+      <span>  <a routerLink="/categories">Categories</a> </span> -->
+
+      <button mat-button routerLink="/home">Home</button>
+      <button mat-button routerLink="/categories">Categories</button>
+      <button mat-button routerLink="/search">Search</button>
+
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</p>
+
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
